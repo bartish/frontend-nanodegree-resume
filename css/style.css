@@ -10,6 +10,9 @@
   padding-left: 5%;
   padding-right: 5%;
 }
+.project-entry {
+  min-height: 150px;
+}
 
 
 h1 {
@@ -151,10 +154,19 @@ ul {
 img {
   padding: 10px;
 }
-#projects img {
+
+.img_wide {
   height: 100px;
   width: 300px;
   float: right;
+  padding-right: 50px;
+}
+
+.project_image {
+  height: 100px;
+  width: 100px;
+  float: right;
+  padding-right: 50px;
 }
 
 

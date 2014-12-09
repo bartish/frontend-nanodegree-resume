@@ -35,6 +35,12 @@ var projects = {
 		"dates": "11/2014 - current",
 		"description": "Website for random math flashcards",
 		"images": ["images/Mathletics.png"]
+		},
+		{
+		"title": "Website Mockup",
+		"dates": "11/2014",
+		"description": "School project for Front End Web Developer course.",
+		"images": ["images/mug.png"]
 		}
 	],
 };
@@ -80,8 +86,7 @@ return internationalName;
 }*/
 
 bio.display = function() {
-	var formattedImage = HTMLbioPic.replace('%data%', bio.biopic);
-	$("#header").prepend(formattedImage);
+
 	var formattedRole = HTMLheaderRole.replace('%data%',bio.role);
 	$("#header").prepend(formattedRole);
 	var formattedName = HTMLheaderName.replace('%data%',bio.name);
@@ -94,6 +99,10 @@ bio.display = function() {
 	$('#topContacts').append(formattedGitHub);
 	var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);
 	$('#topContacts').append(formattedLocation);
+
+	//image
+	var formattedImage = HTMLbioPic.replace('%data%', bio.biopic);
+	$("#header").append(formattedImage);
 
 	//skills
 	if (bio.skills.length != 0) {
@@ -129,7 +138,14 @@ projects.display = function() {
 
 		if (projects.project[project].images.length >0) {
 			for(image in projects.project[project].images) {
-				var formmattedProjectImage = HTMLprojectImage.replace("%data%",projects.project[project].images[image]);
+				var formmattedProjectImage = "";
+				if (projects.project[project].images[image] === "images/Mathletics.png") {
+					formmattedProjectImage = '<img src="images/Mathletics.png" class="img_wide">';
+				}
+				else {
+					formmattedProjectImage = HTMLprojectImage.replace("%data%",projects.project[project].images[image]);
+				}
+				
 				$(".project-entry:last").append(formmattedProjectImage);
 			}
 		}
