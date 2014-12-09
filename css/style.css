@@ -151,6 +151,11 @@ ul {
 img {
   padding: 10px;
 }
+#projects img {
+  height: 100px;
+  width: 300px;
+  float: right;
+}
 
 
 /* Bar chart stuff */
