@@ -18,7 +18,7 @@
 h1 {
 
   font-size: 40px;
-  color: #F5A623;
+  color: #ff9;
   line-height: 48px;
   display: inline;
 }
@@ -90,7 +90,7 @@ a {
 }
 
 #skillsH3 {
-  color: #F5AE23;
+  color: #ff9;
   display: none;
 }
 
@@ -98,12 +98,12 @@ a {
   display: none;
 }
 
-.orange {
-  background-color: #F5AE23;
+.yellow {
+  background-color: #ff9;
 }
 
-.orange-text {
-  color: #F5AE23;
+.yellow-text {
+  color: #ff9;
 }
 
 .white-text {
@@ -168,7 +168,9 @@ img {
   float: right;
   padding-right: 50px;
 }
-
+.highlighted {
+  background-color: #abc !important;
+}
 
 /* Bar chart stuff */
 .chart div {

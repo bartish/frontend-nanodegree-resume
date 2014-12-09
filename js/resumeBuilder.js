@@ -25,6 +25,13 @@ var work = {
 		"location": "Bloomington, MN",
 		"dates": "2001-2004",
 		"description": "Created and maintained employee schedules for the Business Receivables center.  Handled tracking and reporting vacation, sick time and leaves."
+		},
+				{
+		"employer": "A to Z Rental Center",
+		"title": "Shop Employee",
+		"location": "Minneapolis, MN",
+		"dates": "1996-1998",
+		"description": "Assisted customers with selecting the right tools for the job.  Processed rental fees, loaded equipment into the truck, and kept the shop clean."
 		}
 	]
 };
@@ -193,12 +200,17 @@ education.display = function() {
 		var formattedURL = HTMLonlineURL.replace('%data%',education.onlineCourses[oc].url);
 		$(".education-entry:last").append(formattedURL);
 	}	
-
-
-
 }
+
 
 bio.display();
 work.display();
 projects.display();
 education.display();
+
+$(".work-entry, .project-entry, .education-entry").mouseover(function(){
+	$(this).addClass('highlighted');
+});
+$(".work-entry, .project-entry, .education-entry").mouseout(function(){
+	$(this).removeClass('highlighted');
+});
